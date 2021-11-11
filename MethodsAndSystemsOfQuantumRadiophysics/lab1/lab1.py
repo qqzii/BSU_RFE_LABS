@@ -1,4 +1,4 @@
-from MethodsAndSystemsOfQuantumRadiophysics.graph_add import graph_add
+from functions import graph_add
 
 
 def main():
