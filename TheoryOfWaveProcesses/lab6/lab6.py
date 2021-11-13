@@ -9,12 +9,11 @@ angle = data['angle']
 u_max = data['U_max']
 u_min = data['U_min']
 
-
 x = []
 y = []
-for i in angle:
-    x.append(sin(i))
-    y.append(cos(i))
+for i in range(len(angle)):
+    x.append(sin(angle[i] + u_max[i]))
+    y.append(cos(angle[i] + u_min[i]))
 
 
 pf = 0.785
@@ -30,4 +29,4 @@ py = []
 for u in u_max:
     py.append(b * cos(u - df))
 
-graph_add(px, py, ['graph1', '.', '.', '.'])
+graph_add(x, y, ['graph1', '', '', ''])
