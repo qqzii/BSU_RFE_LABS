@@ -17,7 +17,7 @@ def main():
 
     n21 = 3.91
     d = 1 * 10 ** -3
-    _lambda = 3 * 10 ** 8 / 30 * 10 ** 9
+    wavelength = 3 * 10 ** 8 / 30 * 10 ** 9
 
     theoretical_val = []
 
@@ -25,7 +25,7 @@ def main():
         r12 = ((((n21 ** 2) - (sin(i) ** 2)) ** 0.5) - (n21 ** 2) * cos(i)) / (
                 (((n21 ** 2) - (sin(i) ** 2)) ** 0.5) + (n21 ** 2) * cos(i))
 
-        phi = 2 * pi * d / _lambda * (n21 ** 2 - (sin(i) ** 2)) ** 0.5
+        phi = 2 * pi * d / wavelength * (n21 ** 2 - (sin(i) ** 2)) ** 0.5
 
         u = ((4 * (r12 ** 2) * (sin(phi) ** 2)) / (((1 - (r12 ** 2)) ** 2) + 4 * (r12 ** 2) * (sin(phi) ** 2))) ** 0.5
         total_val = round(u * 10 ** 15, 3)
