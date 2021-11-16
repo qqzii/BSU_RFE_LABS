@@ -19,7 +19,8 @@ def main():
     d = 1 * 10 ** -3
     wavelength = 3 * 10 ** 8 / 30 * 10 ** 9
 
-    theoretical_val = []
+    theoretical_u = []
+    # theoretical_t = []
 
     for i in angle:
         r12 = ((((n21 ** 2) - (sin(i) ** 2)) ** 0.5) - (n21 ** 2) * cos(i)) / (
@@ -28,10 +29,13 @@ def main():
         phi = 2 * pi * d / wavelength * (n21 ** 2 - (sin(i) ** 2)) ** 0.5
 
         u = ((4 * (r12 ** 2) * (sin(phi) ** 2)) / (((1 - (r12 ** 2)) ** 2) + 4 * (r12 ** 2) * (sin(phi) ** 2))) ** 0.5
-        total_val = round(u * 10 ** 15, 3)
-        theoretical_val.append(total_val)
+        # t = (((1 - (r12 ** 2)) ** 2) / (((1 - (r12 ** 2)) ** 2) + 4 * (r12 ** 2) * (sin(phi) ** 2))) ** 0.5
 
-    graph_add(angle, theoretical_val, ['graph3', '\u0398, \u00B0', 'U, B', 'Теоретический график'])
+        theoretical_u.append(round(u * 10 ** 15, 3))
+        # theoretical_t.append(round(t, 3))
+
+    graph_add(angle, theoretical_u, ['graph3', '\u0398, \u00B0', 'U, B', 'Теоретический график'])
+    # graph_add(angle, theoretical_t, ['graph4', '\u0398, \u00B0', 'U, B', 'Теоретический график'])
 
 
 if __name__ == "__main__":
