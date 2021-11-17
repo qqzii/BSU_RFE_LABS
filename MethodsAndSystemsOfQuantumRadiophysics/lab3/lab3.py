@@ -1,4 +1,4 @@
-from functions import graph_add
+from functions import interpolated_graph, common_graph
 from math import pi
 
 
@@ -20,10 +20,19 @@ def main():
         y2.append(4.45 * pi * pi * diameter ** 3 * 108 / _ ** 2)
         x2.append(_)
 
-    graph_add(x1, y1, ['graph1', 'Диаметр входного зрачка', 'Сигнал/шум', 'График зависимости С/Ш от диаметра входного '
-                       'зрачка'])
+    interpolated_graph(x1, y1, [
+        'graph1',
+        'Диаметр входного зрачка',
+        'Сигнал/шум',
+        'График зависимости С/Ш от диаметра входного зрачка'
+    ])
 
-    graph_add(x2, y2, ['graph2', 'Фокус', 'Сигнал/шум', 'График зависимости С/Ш от фокуса'])
+    common_graph(x2, y2, [
+        'graph2',
+        'Фокус',
+        'Сигнал/шум',
+        'График зависимости С/Ш от фокуса'
+    ])
 
 
 if __name__ == "__main__":
