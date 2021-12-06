@@ -12,7 +12,7 @@ def main():
     nl = data1['Nl']
     nn = data1['Nn']
 
-    common_graph(temperature, nm, ['graph1', 'T', 'Nm', 'График зависимости плотности излучения от температуры'])
+    interpolated_graph(temperature, nm, ['graph1', 'T', 'Nm', 'График зависимости плотности излучения от температуры'])
     interpolated_graph(temperature, nl, ['graph2', 'T', 'Nl', 'График зависимости яркости от температуры'])
     interpolated_graph(temperature, nn, ['graph3', 'T', 'Nn', 'График зависимости световой отдачи от температуры'])
 
